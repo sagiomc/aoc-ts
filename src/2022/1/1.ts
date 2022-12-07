@@ -6,10 +6,7 @@ const inputArray = input.split('\n\n');
 // PART 1: Find max calories for specific elf
 const sumReducer = (sum, num) => sum + num;
 const getSumOfGroup = (group: string): number =>
-	group
-		.split('\n')
-		.map(Number)
-		.reduce(sumReducer, 0);
+	group.split('\n').map(Number).reduce(sumReducer, 0);
 
 const groupSum = inputArray.map(getSumOfGroup);
 
